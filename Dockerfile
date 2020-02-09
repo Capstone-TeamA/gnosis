@@ -11,14 +11,12 @@ RUN venv/bin/pip install gunicorn
 
 COPY app app
 COPY gnosis.py config.py boot.sh ./
-RUN chmod +x boot.sh
+RUN chmod +X boot.sh
 
 ENV FLASK_APP gnosis.py
 
 RUN chown -R gnosis:gnosis ./
-USER gnosis
 
 EXPOSE 5000
 ENTRYPOINT ["./boot.sh"]
-
 
