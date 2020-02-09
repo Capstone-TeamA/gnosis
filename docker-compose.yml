@@ -10,3 +10,5 @@ services:
             - 5000:5000
         env_file: 
             - ./.env.dev
+        stdin_open: true
+        tty: true

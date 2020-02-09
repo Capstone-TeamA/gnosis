@@ -3,8 +3,6 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+from project import routes
 
-@app.route("/")
-def hello_world():
-    return jsonify(hello="world")
     
